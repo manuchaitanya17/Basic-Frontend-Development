@@ -1,0 +1,98 @@
+<!-- CHAPTER-2 CSS SELECTORS-I -->
+
+<!-- A. WHAT IS A SELECTOR
+  1. A CSS selector selects the HTML element(s) we want to style. 
+  2. We can divide CSS selectors into FIVE categories:
+    a) Simple Selectors (select elements based on name, id, class)
+    b) Combinator Selectors (select elements based on a specific relationship between them)
+    c) Pseudo-class Selectors (select elements based on a certain state)
+    d) Pseudo-elements Selectors (select and style a part of an element)
+    e) Attribute Selectors (select elements based on an attribute or attribute value) -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  
+
+<!-- B. SIMPLE SELECTORS
+  1. We have FIVE Simple Selectors: a)Element Selector  b)ID Selector  c)Class Selector  d)Grouping Selector  
+     e)Universal Selector.
+  
+  2. Elemenet Selector: The element selector selects HTML elements based on the element name.
+  
+  3. ID Selector: The id selector uses the id attribute of an HTML element to select a specific element. The 
+     id of an element is unique within a page, so the id selector is used to select one unique element. To select
+     an element with a specific id, write a hash (#) character, followed by the id of the element. An id name 
+     cannot start with a  number. 
+  
+  4. Class Selector: The class selector selects HTML elements with a specific class attribute. To select elements
+     with a  specific class, write a period (.) character, followed by the class name. You can also specify that
+     only specific HTML elements should be affected by a class. HTML elements can also refer to more than one class.
+     A class name cannot start with a number.
+
+  5. Grouping Selector: The grouping selector selects all the HTML elements with the same style definitions. It will
+     be better to group the selectors, to minimize the code. To group selectors, separate each selector with a comma.
+
+  6. Universal Selector: The universal selector (*) selects all HTML elements on the page. -->
+
+  <style>
+
+    
+    /* Element Selector */
+    p {
+      text-align: center;
+      color: red;
+    }
+
+    /* ID Selector */
+    #idName {
+      text-align: center;
+      color: green;
+    }
+
+    /* Class Selector */
+    .className{
+      text-align: center;
+      color: blue;
+    }
+
+    p.className {
+      text-align: center;
+      color: red;
+    }
+
+    /* Grouping Selector */
+    h1, h2, p {
+      text-align: center;
+      color: red;
+    }
+
+    /* Universal Selector */
+    * {
+      text-align: center;
+      color: blue;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  
+
+
+  
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
