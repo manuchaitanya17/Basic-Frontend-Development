@@ -1,0 +1,288 @@
+<!-- CHAPTER-6 CSS SELECTORS-II -->
+
+<!-- A. COMBINATOR SELECTORS
+  1. A combinator is something that explains the relationship between the element.
+  2. A CSS selector can contain more than one simple selector. Between the simple 
+     selectors, we can include a combinator. In such selectors we select the rela-
+     tives of a particular element.
+  3. There are four different combinators in CSS:
+     a) Descendant Selector (space): The descendant selector matches all elements
+        that are descendants of a specified element.
+     b) Child Selector (>): The child selector selects all elements that are the
+        children(not descandant) of a specified element.
+     c) Adjacent Sibling Selector (+): The adjacent sibling selector is used to
+        select an element that is directly after another specific element.
+        Sibling elements must have the same parent element, and "adjacent" means 
+        "immediately following".
+     d) General Sibling Selector (~): The general sibling selector selects all 
+        elements that are next siblings of a specified element. -->
+
+
+
+<!-- B. PSEUDO-CLASS SELECTOR
+  1. A pseudo-class is used to define a special state of an element.
+  2. For example, it can be used to:
+     - Style an element when a user mouses over it
+     - Style visited and unvisited links differently
+     - Style an element when it gets focus
+  3. The :first-child pseudo-class matches a specified element that is the first child
+     of another element. The element's state should be the first child of its parent.
+  4. The :lang Pseudo-class- The :lang pseudo-class allows you to define special rules
+      for different languages. -->
+
+
+
+
+<!-- C. PSEUDO-ELEMENT SELECTOR 
+  1. A CSS pseudo-element is used to style specified parts of an element.
+  2. For example, it can be used to:
+     - Style the first letter, first letter, markers and selections.
+     - Insert content before, or after, the content of an element.
+  3. The ::first-line pseudo-element- The ::first-line pseudo-element is used to add a 
+     special style to the first line of a text(displayed). ::first-line pseudo-element can only
+     be applied to block-level elements.
+  4. The ::first-letter pseudo-element is used to add a special style to the first letter of
+     a text.
+  5. Pseudo-elements can be combined with HTML classes: p.intro::first-letter or any other
+     selector. 
+  6. The ::before pseudo-element can be used to insert some content before the content of an
+     element. Remember the content added is now part of the element's width, i.e element.
+  7. The ::after pseudo-element can be used to insert some content after the content of an
+     element.  Remember the content added is now part of the element's width, i.e element.
+  8. The ::marker pseudo-element selects the markers of list items.
+  9. The ::selection pseudo-element is used to style the part of element selected by the user. -->
+
+
+
+
+<!-- D. ATTIBUTE SELECTORS
+  1. Style HTML Elements With Specific Attributes. It is possible to style HTML elements that
+     have specific attributes or attribute values.
+  2. CSS [key] Selector: It is possible to style HTML elements that have specific 
+     attributes or attribute values. (Key/Value)
+
+  3. CSS [key="value"] Selector: The [attribute="value"] selector is used to select
+     elements with a specified attribute and value. (Key + Value)
+
+  4. CSS [key~="value"] Selector: The [attribute~="value"] selector is used to select 
+     elements with an attribute value containing a specified word. Generally these attibutes 
+     have custom values. These values are separated by spaces. (Key + A Word in the Value,
+     Word Seperated by Spaces)
+
+  5. CSS [key|="value"] Selector: The [attribute|="value"] selector is used to select
+     elements with the specified attribute, whose value can be exactly the specified value,
+     or the specified value followed by a hyphen (-). The value has to be a whole word, either
+     alone, like class="top", or followed by a hyphen( - ), like class="top-text". (Key + A Word
+     in the Value, Word Seperated by Hyphen)
+
+  6. CSS [key^="value"] Selector: Is used to select elements with the specified attribute,
+     whose value starts with the specified value. The value does not have to be a whole word.
+     (Key+ Start of the Value)
+
+  7. CSS [key$="value"] Selector: The [attribute$="value"] selector is used to select
+     elements whose attribute value ends with a specified value. The value does not have to be
+     a whole word. (Key+ End of the Value)
+
+  8. CSS [key*="value"] Selector: The [attribute*="value"] selector is used to select
+     elements with the specified attribute, whose value contains the specified value. The value
+     does not have to be a whole word. (Key+ Middle of the Value) -->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    /* DESCANDANT SELECTORS */
+    div p {
+      background-color: yellow;
+    }
+
+    /* CHILD SELECTORS */
+    div>p {
+      background-color: yellow;
+    }
+
+    /* ADJACENT SIBLING SELECTORS */
+    div+p {
+      background-color: yellow;
+    }
+
+    /* GENERAL SIBLING SELECTORS */
+    div~p {
+      background-color: yellow;
+    }
+
+    /* PSEUDO-CLASS SELECTOR */
+
+    /* Mouse Hovering States */
+    /* unvisited link */
+    a:link {
+      color: red;
+    }
+
+    /* visited link */
+    a:visited {
+      color: green;
+    }
+
+    /* mouse over link */
+    a:hover {
+      color: hotpink;
+    }
+
+    /* selected link */
+    a:active {
+      color: blue;
+    }
+
+    /* First Child State :first-child */
+    p:first-child {
+      color: blue;
+    }
+
+    /* Language State of Element :lang(name) */
+    q:lang(no) {
+      quotes: "TT " " LL";
+    }
+
+
+    /* Pseudo-Element :first-line */
+    p::first-line {
+      color: #ff0000;
+      font-variant: small-caps;
+    }
+
+    ::marker {
+      color: red;
+      font-size: 23px;
+    }
+
+    #naam::before,
+    #naam::after {
+      content: " Name: ";
+    }
+
+    #naam::selection {
+      color: purple;
+    }
+
+
+    /* Attribute Selectors */
+    [target] {
+      background-color: yellow;
+    }
+
+    [target="_blank"] {
+      background-color: yellow;
+    }
+
+    [title~="flower"] {
+      border: 5px solid yellow;
+    }
+
+    [class|="top"] {
+      background: yellow;
+    }
+
+    [class^="top"] {
+      background: yellow;
+    }
+
+    [class$="top"] {
+      background: yellow;
+    }
+
+    [class*="top"] {
+      background: yellow;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p>This is also First Child of body.</p> <!-- PCFC -->
+
+
+  <!-- Descandant and Child Selector -->
+  <div>
+    <p>Paragraph 1 in the div.</p> <!-- D, C -->
+    <p>Paragraph 2 in the div.</p> <!-- D, C -->
+    <section>
+      <p>Paragraph 3 in the div.</p>
+    </section> <!-- D -->
+  </div>
+
+
+  <!-- Adjacent Sibling Selector -->
+  <div>
+    <p>Paragraph 1 in the div.</p>
+    <p>Paragraph 2 in the div.</p>
+  </div>
+
+  <p>Paragraph 3. After a div.</p> <!-- A, G -->
+  <p>Paragraph 4. After a div.</p> <!-- G -->
+
+  <div>
+    <p>Paragraph 5 in the div.</p>
+    <p>Paragraph 6 in the div.</p>
+  </div>
+
+  <p>Paragraph 7. After a div.</p> <!-- A, G -->
+  <p>Paragraph 8. After a div.</p> <!-- G -->
+
+
+  <!-- General Sibling Selector -->
+  <div>
+    <p>Paragraph 2.</p>
+  </div>
+
+  <p>Paragraph 3.</p> <!-- G -->
+  <code>Some code.</code>
+  <p>Paragraph 4.</p> <!-- G -->
+
+
+  <!-- First Child -->
+  <p>This is some text.</p>
+  <p>This is some text.</p>
+
+  <div>
+    <p>This is some text.</p> <!-- PCFC -->
+    <p>This is some text.</p>
+  </div>
+
+  <p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
+
+
+
+  <!-- Pseudo-Element Selector-First Line -->
+  <p>You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text.
+    And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more,
+    and more.</p>
+  <script src="script.js"></script>
+
+  <!-- Marker of List -->
+  <ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ul>
+
+  <ol>
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ol>
+
+
+  <p id="naam">Manu Chaitanya</p>
+</body>
+
+</html>

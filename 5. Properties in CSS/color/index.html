@@ -1,0 +1,121 @@
+<!-- CHAPTER-1 COLOR PROPERTY IN CSS -->
+
+<!-- A. COLORS PROPERTY 
+  1. Values to colors property are specified using predefined value using these colors representers:
+    a) Color Names
+    b) RGB
+    c) HEX
+    d) HSL
+    e) RGBA
+    f) HSLA -->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+<style>
+
+
+  
+  
+/* B. COLOR NAMES 
+  1. In CSS, a color can be specified by using a predefined color name.
+  2. CSS/HTML support 140 standard color names. Refer- https://www.w3schools.com/colors/colors_names.asp */
+
+  h1{
+    color: blueviolet;
+  }
+
+  
+  
+/* C. RGB/RGBA 
+  1. An RGB color value represents RED, GREEN, and BLUE light sources.
+  2. In CSS, a color can be specified as an RGB value, using this formula: rgb(red, green, blue).
+  3. Each parameter (red, green, and blue) defines the intensity of the color between 0 and 255.
+  4. RGBA color values are an extension of RGB color values with an Alpha Channel - which specifies the opacity for a 
+     color.
+  5. An RGBA color value is specified with: rgba(red, green, blue, alpha).
+  6. The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all). */
+
+  
+  h2{
+    color: rgb(255, 0, 0);
+  }
+
+  h3{
+    color: rgba(32, 34, 12, 0.8);
+  }
+
+
+  
+  
+/* C. HEX
+  1. A hexadecimal color is specified with: #RRGGBB, where the RR (red), GG (green) and BB (blue) hexadecimal integers 
+     specify the components of the color.
+  2. In CSS, a color can be specified using a hexadecimal value in the form: #rrggbb.
+  3. Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff (same as decimal 0-255).
+  4. Shades of gray are often defined using equal values for all the 3 light sources.
+  5. Shortcut: 3 Digit HEX Value- The 3-digit hex code is a shorthand for some 6-digit hex codes. The 3-digit hex code 
+     can only be used when both the values (RR, GG, and BB) are the same for each component. So, if we have #ff00cc, it 
+     can be written like this: #f0c. */
+  
+  p {
+    color: #ee82ee;
+  }
+  
+  p {
+    color: #b58; /* Shorthand for #bb5588 */
+  }
+
+
+
+  
+/* D. HSL/HSLA ***
+  1. HSL stands for hue, saturation, and lightness. 
+  2. A color can be specified using hue, saturation, and lightness (HSL) in the form: hsl(hue, saturation, lightness).
+  3. Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+  4. Saturation is a percentage value. 0% means a shade of gray, and 100% is the full color.
+  5. Lightness is also a percentage. 0% is black, 50% is neither light or dark, 100% is white.
+  6. HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity for a 
+     color. An HSLA color value is specified with: hsla(hue, saturation, lightness, alpha) */
+
+  div{
+    color: hsl(30, 20%, 20%);
+  }
+
+  div{
+    color: hsla(30, 20%, 20%, 0.4);
+  }
+
+
+
+  
+  
+  
+</style>
+
+
+
+
+
+</head>
+
+<body>
+  
+
+
+
+
+
+  
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

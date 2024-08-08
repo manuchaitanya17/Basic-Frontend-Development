@@ -1,0 +1,47 @@
+<!-- CHAPTER-10 CSS !important -->
+
+<!-- A. !important
+  1. If we use the !important rule, it will override ALL previous styling rules for
+     that specific property on that element.
+  3. The !important property in CSS is used to provide more weight (importance) than
+     normal property. In CSS, the !important means that “this is important”, ignore
+     all the subsequent rules, and apply !important rule and the !important keyword
+     must be placed at the end of the line, immediately before the semicolon. -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  
+  <style>
+  #myid {
+    background-color: blue;
+  }
+
+  .myclass {
+    background-color: gray;
+  }
+
+  p {
+    background-color: red !important;
+  }
+  </style>
+</head>
+
+<body>
+  
+  <p>This is some text in a paragraph.</p>
+
+  <p class="myclass">This is some text in a paragraph.</p>
+
+  <p id="myid">This is some text in a paragraph.</p>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>

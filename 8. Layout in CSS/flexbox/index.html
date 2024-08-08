@@ -1,0 +1,181 @@
+<!-- CHAPTER-7 FLEXBOX -->
+
+<!-- A. FLEXBOX DIMENSIONS-REFER dimensions.webp -->
+
+<!-- B. FLEXBOX LAYOUT MODULE
+  1. Before the Flexbox Layout module, there were four layout modes:
+     a) Block, for sections in a webpage
+     b) Inline, for text
+     c) Table, for two-dimensional table data
+     d) Positioned, for explicit position of an element
+  2. The Flexible Box Layout Module, makes it easier to design flexible responsive
+     layout structure without using float or positioning. -->
+
+
+
+<!-- B. FLEXBOX CONTAINER
+  1. To start using the Flexbox Model, you need to first define a flex container.
+  2. The flex container properties are:
+     a) flex-direction: row(all items in one row) | row-reverse | column | column-reverse
+
+     b) flex-wrap: Determines how the item will be warpped if the screen is resized.
+                   nowrap | wrap | wrap-reverse
+
+     c) flex-flow: Shorthand for flex-direction and flex-wrap
+
+     d) justify-content: The justify-content property is used to align the flex items
+                         horizontally. center | flex-start | flex-end | space-between |
+                         space-around | space-evenly.
+
+     e) align-items: The align-items property is used to align the flex items vertically.
+                     center | flex-start | flex-end | stretch(default) | baseline    
+                      
+     f) align-content: The align-content property is used to align the flex lines. -->
+
+
+
+<!-- C. FLEXBOX ITEMS
+  1. The direct child elements of a flex container automatically becomes flexible (flex)
+     items.
+  2. The flex item properties are:
+      a) order: The order property specifies the order of the flex items.
+                The first flex item in the code does not have to appear as the first item
+                in the layout. The order value must be a number, default value is 0.
+
+      b) flex-grow: The flex-grow property specifies how much a flex item will grow relative 
+                      to the rest of the flex items. The value must be a number, default value
+                      is 0.
+      
+      c) flex-shrink: The flex-shrink property specifies how much a flex item will shrink 
+                        relative to the rest of the flex items. The value must be a number,
+                        default value is 1.
+
+      d) flex-basis: The flex-basis property specifies the initial length of a flex item.
+
+      e) flex: The flex property is a shorthand property for the flex-grow, flex-shrink, and
+               flex-basis properties.
+
+      f) align-self: The align-self property specifies the alignment for the selected item inside
+                     the flexible container. The align-self property overrides the default 
+                     alignment set by the container's align-items property. -->
+
+
+
+<!-- D. PERFECT CENTERING USING FLEXBOX: See Code. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+
+
+    /* flex-direction Property */
+    .flex-container {
+      display: flex;
+      flex-direction: row-reverse;
+      background-color: DodgerBlue;
+    }
+    .flex-container > div {
+      background-color: #f1f1f1;
+      margin: 10px;
+      padding: 20px;
+      font-size: 30px;
+    }
+
+    .flex-containerFlexFlow {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+
+    /* justify-content Property */
+    .flex-container-justifyContent {
+      display: flex;
+      justify-content: center;
+      background-color: DodgerBlue;
+    }
+
+    .flex-container-justifyContent > div {
+      background-color: #f1f1f1;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+    }
+
+
+    /* align-item Property */
+    .flex-container {
+      display: flex;
+      height: 200px;
+      align-items: flex-start;
+      background-color: DodgerBlue;
+    }
+
+    .flex-container > div {
+      background-color: #f1f1f1;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+    }
+
+    /* Perfect Centering */
+    .flex-container {
+      display: flex;
+      height: 300px;
+      justify-content: center;
+      align-items: center;
+    }
+    
+  </style>
+  
+</head>
+
+<body>
+  <div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+  </div>
+
+
+  <div class="flex-containerFlexFlow">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+  </div>
+
+  <div class="flex-container-justifyContent"">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+  </div>
+
+  <div class="flex-container">
+    <div style="order: 3">1</div>
+    <div style="order: 2">2</div>
+    <div style="order: 4">3</div>
+    <div style="order: 1">4</div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>

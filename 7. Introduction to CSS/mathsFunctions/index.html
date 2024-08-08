@@ -1,0 +1,77 @@
+<!-- CHAPTER-11 CSS MATHS FUNCTIONS -->
+
+<!-- A. MATHS FUNCTIONS
+  1. The CSS math functions allow mathematical expressions to be used as property's
+     values. Here, we will discuss the calc(), max(), min() and clamp() functions.
+  2. The calc() Function: The calc() function performs a calculation to be used 
+     as the property value.
+  3. The max() Function: The max() function uses the largest value, from a comma
+     -separated list of values, as the property value.
+  4. The min() Function: The min() function uses the smallest value, from a comma
+     -separated list of values, as the property value.
+  5. The clamp() Function: Constraining a value between two values. We can combine
+     the functions of min() and max() by using clamp(). If the value to be clamped 
+     is less than the passed minimum value, the function will return the minimum value.
+     If the value to be clamped is greater than the passed maximum value, the function
+     will return the maximum value. If the value to be clamped is between the passed
+     minimum and maximum values, the function will return the original value to be 
+     clamped.
+  6. Rest Functions are Mathematical: 
+     https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  
+  <style>
+    #div1 {
+      position: absolute;
+      left: 50px;
+      width: calc(100% - 100px);
+      border: 1px solid black;
+      background-color: yellow;
+      padding: 5px;
+    }
+
+    #div2 {
+      background-color: yellow;
+      height: 100px;
+      width: max(50%, 300px);
+      width: clamp(20%, 1px, 80%);
+    }
+
+    
+
+    
+  </style>
+
+  
+</head>
+
+<body>
+  
+  <h1>The calc() Function</h1>
+
+  <p>Create a div that stretches across the window, with a 50px gap between both sides of the div and the edges of the window:</p>
+
+  <div id="div1">Some text...</div>
+
+  <h1>The max() Function</h1>
+
+  <p>Use max() to set the width of #div1 to whichever value is largest, 50% or 300px:</p>
+
+  <div id="div1">Some text...</div>
+
+  <p>Resize the browser window to see the effect.</p>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
