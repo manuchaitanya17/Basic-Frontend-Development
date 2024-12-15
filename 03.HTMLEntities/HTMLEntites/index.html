@@ -1,0 +1,104 @@
+<!-- CHAPTER-1- HTML ENTITIES -->
+
+<!-- A. HTML ENTITES- INTRODUCTION
+      1. Reserved characters in HTML must be replaced with HTML Entities, or there are some characters not
+         available on our keyboard to use, these are called Special Charcters.
+      2. For example:  If we use the less than (<) or greater than (>), signs in our text, the browser might 
+         mix them with tags.
+      3. HTML Entities are used to display special characters/symbols in HTML. 
+      4. HTML Entites can be represented as either Entity Name or Entity Number.
+      4. A HTML entity looks like this: &entity_name;  OR  &#entity_number.
+      5. Entity names are case sensitive.
+      4. HTML Entities can be:
+         a) Character Entites.
+         b) Symbol Entities.
+         c) Emojis Entities.  -->
+
+
+
+<!-- B. CHARACTER ENTITES
+      1. Character entities are used to display reserved characters in HTML.
+      2. A character entity looks like this: &entity_name;  OR  &#entity_number.
+      3. For example: To display a less than sign (<) we must write: &lt; or &#60;
+      4. Advantage of using an entity name: An entity name is easy to remember.
+      5. Disadvantage of using an entity name: Browsers may not support all entity names, but 
+         support for entity numbers is good.
+      6. Character being represented can be of character-set:
+           a) ASCII Characters.
+           b) ISO 8859-1 Characters.
+      7. All the HTML Enitity Number/Name of the Charcter: REFER: https://www.freeformatter.com/html-entities.html -->
+
+
+
+
+<!-- C. SYMBOL ENTITES
+      1. Many mathematical, technical, and currency symbols, are not present on a normal keyboard.
+      2. To add such symbols to an HTML page, we can use the entity name or the entity number
+         (a decimal or a hexadecimal reference) for the symbol.
+      3. Symbols being represented can be of symbol from:
+        a) ISO 8859-1 Symbols.
+        b) Math Symbols.
+        c) Greek Letters.
+      4. All the HTML Enitity Number/Name of the Symbol: REFER: https://www.freeformatter.com/html-entities.html  -->
+
+
+
+
+<!-- D. EMOJI'S ENTITES
+      1. Since Emojis are characters, they can be copied, displayed, and sized just like any other character in HTML.
+      2. If we want any of the emojis displayed in HTML, we can use the Entity Number represented in  decimal (dec) or
+         hexadecimal (hex) reference.
+      2. All the HTML Enitity Number of the Emojis: REFER: https://www.w3schools.com/charsets/ref_emoji.asp  -->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  
+  
+  <h1>Character Entity Example</h1>
+  <h2>The less-than sign: &lt;</h2>
+
+  <br>
+
+  <h1>Symbol Entity Example: </h1>
+  <h2>HTML ISO-8859-1 Symbol Example</h2>
+  <h2>The copyright symbol: &copy;</h2>
+
+
+  <br>
+
+  
+  <h1>Mathematical Symbol Example</h1>
+  <h2>The empty-sets symbol: &empty;</h2>
+
+  <br>
+  
+  <h1>Greek Letter Example</h1>
+  <h2>The capital gamma letter: &Gamma;</h2>
+
+  <br>
+
+  <h1>Emoji's Entity Example: </h1>
+  <p>&#128512;</p>
+
+
+  
+
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
