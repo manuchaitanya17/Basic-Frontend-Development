@@ -1,0 +1,111 @@
+<!-- CHAPTER-5- LINKS  -->
+
+<!-- A. HTML LINKS- INTRODUCTION
+    1. Links are defined inside Anchor Tag. Anchor Tag creates a hyperlink to web pages, 
+       files, email addresses, locations in the same page, or anything else a URL can address.
+    2. A link has two ends, An Anchor and a Direction. The "anchor" refers to the source of the link. It is 
+       the element that the user interacts with, such as text or an image, that has been designated as a link. When 
+       the user clicks on the anchor, it triggers the link. The "direction" refers to the destination or target of the link.
+    3. When you move the mouse over a link, the mouse arrow will turn into a little hand(Can be changed suing CSS).
+    4. A link need not have to be text. A link can be an image or any other HTML element. -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  
+<!-- B. HTML LINKS TAG- SYNTAX  -->
+      <a href="URL">Syntax Here!</a>
+
+      <a href="https://www.instagram.com/m7chaitanya"><img src="picture.png" alt="HTML tutorial"></a>
+
+
+<!-- C. ATTRIBUTES OF ANCHOR TAG
+    1. href- HyperLink Reference indicates the link's destination. Links are not restricted to HTTP-based URL they 
+       can use any URL scheme supported by browsers:
+        a) Sections of a page with document fragments. In href we have to write the path name followed with id.
+        b) Specific text portions with text fragments.
+        c) Pieces of media files with media fragments.
+        d) Telephone numbers with tel: URLs.
+        e) Email addresses with mailto: URLs.
+  
+    2. target- The target attribute specifies where to open the linked document. By default, the linked page will be 
+       displayed in the current browser window. To change this, we must specify another target for the link. 
+       The target attribute can have one of the following values:
+        a) _self - Default. Opens the document in the same window/tab as it was clicked.
+        b) _blank - Opens the document in a new tab.
+        c) _parent - Opens the document in the parent frame.
+        d) _top - Opens the document in the full body of the window.
+  
+    3. title- Hovering the mouse over the link will display the TOOLTIP. The value can be any string. Hover over the 
+       link and a tooltip appears.
+       Note: Some of the more attributes will be discussed after Backend Tutorials. -->
+
+      <a href="index.html#thisSection">A Particular Section of Page</a>
+  
+      <a href="mailto:m7chaitanya@gmail.com">Send email</a>
+  
+      <a href="tel:+918877454586">Call Me</a>
+
+      <a href="file.html">Not a HTTP Based URL</a>
+  
+      <a href="https://www.instagram.com/m7chaitanya" target="_blank" title="Visit the most famous Programmer in India">Click Here!</a>
+    
+
+
+
+  <!-- D. URL: UNIFORM RESOURCE LOCATOR
+    1. Introduction- URLs (Uniform Resource Locators) are used to identify resources on the internet. 
+       Its an address of web pages, files, images, and other content, so that users can access them. 
+       There are two main types of URLs: absolute URLs and relative URLs.
+  
+      I. Absolute URLs: An absolute URL is a complete and fully qualified web address that includes all the 
+         necessary information to locate a resource from any where on the internet. It includes the protocol
+         (e.g., "http://" or "https://"), domain name (e.g., "www.example.com"), and the specific path to
+         the resource (e.g., "/page.html" or"/images/image.jpg").
+  
+      II. Relative URLs: A relative URL, on the other hand, provides a partial web address that is relative to the 
+          current page's location. Instead of including the full domain and protocol, it specifies the path to the 
+          resource relative to the current page's location. They are useful for internal linking within the same
+          website. -->
+
+        <!--  Describing the Path Relative to the Current (Working) Directory: 
+  
+          a) Case-1: Where the data-files directory is in the current directory(in the Sibling Directory).
+             String filePath = "./data-files/geological/EQs_last_week_of_2021.csv";
+
+          b) Case-2: Where the data-files directory up one level (in the Parent Directory):
+             Strig filePath = "../data-files/geological/EQs_last_week_of_2021.csv";
+
+          c) Case-3: Where the data-files directory is up two levels (in the Grandparent Directory):
+             String filePath = "../../data-files/EQs_last_week_of_2021.csv";
+
+          d) Case-4: Where the file is present in the same directory:
+             String filename = "file.html"; -->
+  
+             <a id="thisSection" href="https://www.google.com/">Absolute URL</a>
+
+             <a href="file.html">Relative URL</a>
+  
+             <a href="./SiblingDirectory/file2.html">Case-1</a>
+  
+             <a href="file.html">Case-4</a>
+
+
+
+
+  
+  
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

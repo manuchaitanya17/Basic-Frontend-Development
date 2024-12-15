@@ -1,0 +1,117 @@
+<!-- CHAPTER-6- LISTS -->
+
+<!-- A. HTML LISTS INTRODUCTION
+    1. HTML lists allow web developers to group a set of related items in lists, like navigation bar.
+    2. Their are three types of lists:
+       I. Ordered Lists
+       II. Unordered Lists
+       III. Description Lists -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- B. ORDERED LIST
+    1. The HTML <ol> tag defines an ordered list. An ordered list can be numerical or alphabetical.
+    2. The list items will be marked with numbers by default. 
+    3. How to remember the syntax: <ol> ->  <li> -> List Title  -->
+
+  <ol>
+    <li>Physics</li>
+    <li>Mathematics</li>
+    <li>Chemistry</li>
+  </ol>
+
+  <!-- C. ATTRIBUTES IN ORDERED LIST TAG 
+    1. type: The type attribute of the <ol> tag, defines the type of the list item marker. 
+             The type key values are as follow:
+         a) type="1"	The list items will be numbered with numbers (default).
+         b) type="A"	The list items will be numbered with uppercase letters.
+         c) type="a"	The list items will be numbered with lowercase letters.
+         d) type="I"	The list items will be numbered with uppercase roman numbers.
+         e) type="i"	The list items will be numbered with lowercase roman numbers.
+  
+    2. start: This attribute specifies the starting value of the ordered list. 
+              It is particularly useful when you want the list to start from a specific number other 
+              than the default value of 1. Remember this only for numbers type.
+  
+    3. reversed: When this boolean attribute is present, it indicates that the order of the list items should be reversed. 
+                 The list will be displayed in reverse order. We can use any type.
+
+    4. value: This attribute can be used with individual list items (<li>) within ordered lists 
+              (<ol>) to override the default numbering and provide a specific value. Remember this only for numbers type.
+  
+    5. title: The title attribute provide additional information about the term or description. When a user hovers over the element, 
+               the title content is displayed as a tooltip. -->
+
+
+  <ol type="A">
+    <li>Vaishnavi Jaiswal</li>
+    <li>Malik Arsala</li>
+    <li>Anjali</li>
+  </ol>
+
+
+  <ol start="50">
+    <li>Kritika Ranjan</li>
+    <li>Manaswani Mukta</li>
+    <li>Anshul Chaurasiya</li>
+  </ol>
+
+
+  <ol type="A" reversed>
+    <li>Python</li>
+    <li>Java</li>
+    <li>HTML</li>
+  </ol>
+
+
+  <ol title="This is the Ordered List">
+    <li title="This is One">One</li>
+    <li>Two</li>
+    <li value="10">Ten</li>
+  </ol>
+
+
+  <!-- D. UNORDERED LIST
+    1. The HTML <ul> tag defines an unordered (bulleted) list.
+    2. The list items will be marked with bullets (small black circles) by default. 
+       We can change the bullets using CSS.
+    3. How to remember the syntax: <ul> ->  <li> -> List Title  -->
+
+
+  <ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ul>
+
+
+  <!-- D. DESCRIPTION LIST
+    1. A description list is a list of terms, with a description of each term. 
+       We use this list when we want to describe out each term.
+    2. The <dl> tag defines the description list, the <dt> tag defines the term (name), and the <dd> tag describes each term.
+    3. How to remember the syntax: <dl> ->  <dt> -> Description Title || <dd> Descrption Details -->
+
+  <dl>
+    <dt title="Quite Beautiful, she was">Vaishnavi Jaiswal</dt>
+    <dd>- First Girlfriend</dd>
+    <dt title="Quite Intelligent, she was">Malik Arsala</dt>
+    <dd>-Second Girlfriend</dd>
+  </dl>
+
+
+
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

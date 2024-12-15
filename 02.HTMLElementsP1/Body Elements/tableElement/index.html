@@ -1,0 +1,111 @@
+<!-- CHAPTER-7- TABLE ELEMENT -->
+
+<!-- A. HTML TABLE- INTRODUCTION
+    1. HTML tables allow web developers to arrange data into rows and columns. Its a block, normal and 
+       semantic for structure element.
+      2. A table in HTML consists of TABLE ROWS, TABLE HEADING, TABLE DATA. -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <!-- B. COMPONENTS OF TABLE ELEMENT
+    1. Table Caption(Optional): The <caption> tag defines a table caption. The <caption> tag must be 
+         inserted immediately after the <table> tag.
+      -  By default, a table caption will be center-aligned above a table. However, the CSS properties text-align 
+         and caption-side can be used to align and place the caption.
+      -  We often use <detail> tag which is Detail Element inside the Caption Element.
+         The <details> HTML element creates a disclosure widget in which information is 
+         visible only when the widget is toggled into an "open" state. A summary or label must be provided 
+         using the <summary> element.
+
+
+    2. Table Rows:
+      a) Each table row starts with a <tr> and ends with a </tr> tag. <tr> stands for table row. 
+      b) You can have as many rows as you like in a table; just make sure that the number of cells are the same in each row.
+                   
+    3. Table Columns: Heading
+      a) Sometimes you want your cells to be table header cells. In those cases use the <th> tag instead of the <td> tag.
+      b) <th> stands for table header.
+      c) By default, the text in <th> elements are bold and centered, but you can change that with CSS.
+
+    4. Table Columns: Data 
+      a) Each table cell is defined by a <td> and a </td> tag. <td> stands for table data.
+      b) Everything between <td> and </td> are the content of the table cell. 
+         How we are constructing: First we create table using table tag, then we create each rows in which we 
+        insert cells using <th> or <td>
+        How to Learn: <table> -> <caption> || <tr> -> <th> || <td>  -->
+
+
+
+  <!-- C. ATTRIBUTES OF TABLE ELEMENT
+    1. border: This integer attribute defines, in pixels, the size of the frame surrounding the table and cells. 
+               If set to 0.
+  
+    2. bgcolor: The background color of the table.
+
+    3. cellpadding: This attribute defines the space between the content of a cell and its border, 
+                    displayed or not. If the cellpadding's length is defined in pixels, this pixel-sized 
+                    space will be applied to all four sides of the cell's content. If the length is 
+                    defined using a percentage value, the content will be centered and the total vertical space 
+                    (top and bottom) will represent this value. The same is true for the total horizontal space(left and right).
+                    Whereas, the default cell spacing value is 1.
+  
+    4. cellspacing: This attribute defines the size of the space between two cells in a percentage value or pixels. 
+                    The attribute is applied both horizontally and vertically, to the space between the top of the 
+                    table and the cells of the first row, the left of the table and the first column, the right of 
+                    the table and the last column and the bottom of the table and the last row. The default cell spacing value is 2.
+  
+    5. width: This attribute defines the width of the table. 
+
+    6. align: This enumerated attribute indicates how the table must be aligned inside the containing document.
+               Values are left, right or center. 
+       NOTE: Each attribute can be used anywhere inside the table elements or on table element itself. 
+
+    7. colspan(Spanning Attribute): To make a cell span over multiple columns, use the colspan attribute. 
+                                    We have to remeber, how many columns we can add more to balance the above 
+                                    and below columns to represent balanced table.The value of the colspan 
+                                    attribute represents the number of columns to span.
+  
+    8. rowspan(Spanning Attribute): To make a cell span over multiple rows, use the rowspan attribute.
+                                     The value of the rowspan attribute represents the number of rows to span.
+       NOTE: Spanning attributes are only for <th> or <td> i.e for cells. -->
+
+  <table border="2" cellpadding="5" bgcolor="red" cellspacing="0" width="50">
+    <caption>
+      School Details
+      <details>
+        <summary>Details</summary>
+        <p>Something small enough to escape casual notice.</p>
+      </details>
+    </caption>
+    <tr align="right">
+      <th colspan="2">Name</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td rowspan="2">1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td align="right">Harsh Jain</td>
+      <td>Kritika Ranjan</td>
+    </tr>
+  </table>
+
+
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

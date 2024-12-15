@@ -1,0 +1,76 @@
+<!-- CHAPTER-8- IMAGE ELEMENT -->
+
+<!-- A. HTML IMAGE- INTRODUCTION
+    1. Images can improve the design and the appearance of a web page.
+    2. The HTML <img> tag is used to embed an image in a web page. They are inline element.
+    3. Images are not technically inserted into a web page; images are linked to web pages using URL.
+       The <img> tag creates a holding space provided using height and widht attribute for the referenced image.
+    4. The <img> tag is empty tag. Image can ce used as link as we discussed in Link Chapter. -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+  <!-- B. ATTRIBUTES OF IMAGE ELEMENT
+    1. src(Compulsory): The Source required src attribute specifies the path (URL) to the image.
+  
+    2. alt(Compulsory): The Alternate required alt attribute provides an alternate text for an image, 
+       if the user for some reason cannot view it because of slow connection, an error in the src attribute, 
+       or if the user uses a screen reader. The value of the alt attribute should describe the image.
+  
+    3. width: This Width attribute to specify the width of image.
+  
+    4. height: This Height attribute to specify the height of image.
+    5. title: The Title attribute is used to add title to the image.
+    6. fetchpriority: Provides a hint of the relative priority to use when fetching the image. Allowed values:
+                      high: Signals a high-priority fetch relative to other images.
+                      low: Signals a low-priority fetch relative to other images.
+                      auto: Default: Signals automatic determination of fetch priority relative to other images.
+
+    7. srcset: An HTML image attribute that specifies the list of images(seperated with white spaces) to use in                       
+              different browser situations. The browser will pick the most optimal image version, based on the screen                
+              size and resolution. This concept is known as responsive images. -->
+
+
+  <img src="picture.jpg" alt="Jasmine Flowert" width="150" height="120" fetchpriority="veryslow"
+    title="This image is cool">
+
+
+
+
+
+  <!-- C. COMMON IMAGE FORMAT
+      Here are the most common image file types, which are supported in all browsers (Chrome, Edge, Firefox, Safari, Opera):
+  
+       Abbreviation	            File Format	                       File Extension
+           APNG	          Animated Portable Network Graphics          .apng
+           GIF	          Graphics Interchange Format	                .gif
+	         ICO            Microsoft Icon	                            .ico, .cur
+	         JPEG           Joint Photographic Expert Group             .jpg, .jpeg, .jfif, .pjpeg, .pjp  
+	         PNG            Portable Network Graphics	                  .png
+           SVG	          Scalable Vector Graphics	                  .svg    -->
+
+
+
+
+
+
+
+
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

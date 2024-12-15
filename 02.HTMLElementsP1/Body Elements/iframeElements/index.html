@@ -1,0 +1,85 @@
+<!-- CHAPTER-14- INLINE FRAME ELEMENT -->
+
+<!-- A. INLINE FRAME ELEMENT- INTRODUCTION
+    1. An HTML iframe element is used to display a web page within a web page. It's a Block element.
+    2. An inline frame is used to embed another document within the current HTML document. -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+  <!-- D. ATTRIBUTES IN VIDEO ELEMENT 
+    1. src: The path of the webpage to be inserted.
+
+    2. height and width: To specify the size of the iframe.
+
+    3. muted: Add muted after autoplay to let our video start playing automatically
+       (but muted). We can add muted indivisually also, these are control undefault 
+       boolean values. 
+
+    4. frameborder: Removes the frameborder if value = 0, by default the value = 1.
+       Note: Styling the Included Web Page can be done using CSS like removing border.
+  
+    5. name: Should be there when it has to be used as target place to open a link. 
+  
+    6. scrolling: Indicates when the browser should provide a scrollbar for the frame:
+        - auto: Only when the frame's content is larger than its dimensions.
+        - yes: Only when the frame's content is larger than its dimensions.
+        - no: Never show a scrollbar. 
+  
+    7. srcdoc: Overriding the src attribute. If a browser does not support the 
+       srcdoc attribute, it will fall back to the URL in the src attribute.
+
+    8. sandbox: To be discussed later. -->
+  
+  <iframe src="demo1.html" height="200" width="300" frameborder="1" scrolling="yes"></iframe>
+
+
+
+
+  <!-- E. IFRAME- TARGET FOR A LINK
+    1. An iframe can be used as the target frame for a link.
+    2. The target attribute of the link must refer to the name attribute of the iframe. -->
+
+  <h2>Iframe - Target for a Link</h2>
+
+  <iframe src="demo2.html" name="iframe" height="200" width="300" scrolling="yes"></iframe>
+  <p><a href="www.manuchaitanya.com" target="iframe">Manu Chaitanya's Instagram</a></p>
+
+
+  
+  <!-- F. YOUTUBE VIDEOS USING IFRAME 
+    1. To play your video on a web page, do the following:
+      a) Upload the video to YouTube.
+      b) Take a note of the Video ID.
+      c) Define an <iframe> element in your web page.
+      d) Let the src attribute point to the video URL.
+      e) Use the width and height attributes to specify the dimension of the player.
+      f) Add any other parameters to the URL. 
+      g) allowfullscreen attribute is used here directly. Rest of the controls are added in the link of
+         youtube like mute, autoplay, controls and loop after '?' seprated using '&' 
+      h) Sometimes certain combinations of parameters might not work as expected or might be restricted. -->
+
+
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/glTKip6Qbm8?controls=1&autoplay=1&mute=1&loop=1"
+    frameborder="0" allowfullscreen
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+  </iframe>
+
+
+
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

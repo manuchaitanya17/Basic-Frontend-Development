@@ -1,0 +1,118 @@
+<!-- CHAPTER-12- VIDEO ELEMENT -->
+
+<!-- A. MULTIMEDIA- INTRODUCTION
+    1. An image, such as a photograph or illustration, is a form of media. On the other hand, 
+       a video is a multimedia presentation because it typically integrates multiple
+       media elements, such as images, audio, and sometimes text or animations.
+    2. Multimedia on the web is Sound, Music, Videos, Movies, and Animations. 
+    3. The first web browsers had support for text only, limited to a single font in a
+       single color. Later came browsers with support for colors, fonts, images, and           
+       multimedia. -->
+
+
+
+<!-- B. MULTIMEDIA FORMATS 
+    1. Multimedia elements in HTML 1) Audio 2) Video are stored in media files.
+    2. Multimedia files have formats and different extensions like: .wav, .mp3, .mp4,
+      .mpg, .wmv, and .avi. -->
+
+
+
+<!-- C. VIDEO ELEMENT
+    1. The HTML <video> element is used to show a video on a web page. Its a block element.
+    2. The <source> element allows you to specify alternative video files which the
+       browser may choose from. The browser will use the first recognized format. This is 
+       optional but recommended.
+    3. The text between the <video> and </video> tags will only be displayed in browsers
+       that do not support the <video> element. 
+    4. To add VTT(Video Text Track) we use <track> element. WebVTT is a text based format, which must 
+       be encoded 
+       using UTF-8. WebVTT is text/vtt. -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  
+<!-- D. ATTRIBUTES IN VIDEO ELEMENT 
+    1. controls: The controls attribute adds video controls, like play, pause, and
+       volume. It's a compulsory tag. Its a boolean.
+
+    2. height and width: It is a good idea to always include width and height
+       attributes. If height and width are not set, the page might flicker while the
+       video loads. 
+
+    3. autoplay: To start a video automatically, we use the autoplay attribute.
+
+    4. muted: Add muted after autoplay to let our video start playing automatically
+       (but muted). We can add muted indivisually also, these are control undefault 
+       boolean values.
+
+    5. controlslist: Helps the browser select what controls to show for the video element
+       whenever the browser shows its own set of controls. The allowed features of
+       control can be removed using this. 
+       The allowed values are: nodownload, nofullscreen and noremoteplayback.
+
+    6. disablepictureinpicture: Attribute if you want to disable the Picture-In-Picture 
+       mode. 
+    
+    7. loop: A Boolean attribute; if specified, the browser will automatically seek back 
+       to the start upon reaching the end of the video. By default its false.
+
+    8. poster: A URL for an image to be shown while the video is downloading(first time). 
+       If this attribute isn't specified, nothing is displayed until the first frame is 
+       available, then the first frame is shown as the poster frame. If this attribute is there then after the 
+       video is finished and there is no loop then again the poster will be displayed.
+
+    9. preload: This enumerated attribute is intended to provide a hint to the browser about what the
+       author thinks will lead to the best user experience regarding what content is loaded before the 
+       video is played. It may have one of the following values:
+         - none: Indicates that the video should not be preloaded.
+         - metadata: Indicates that only video metadata (e.g. length) is fetched.
+         - auto: Indicates that the whole video file can be downloaded, even if the user is not 
+           expected to use it.
+         - empty string: Synonym of the auto value.
+       The default value is different for each browser. The spec advises it to be set to metadata. -->
+
+  
+  
+  <video width="400" height="240" controls src="friday.mp4" poster="image.jpeg">
+    <track default kind="captions" srclang="en" src="friday.vtt" /> Your browser
+     does not support HTML video.
+  </video>
+
+  
+  
+  <video preload="none" width="400" height="240" controls muted autoplay controlslist="nodownload nofullscreen noremoteplayback"
+    disablepictureinpicture loop >
+    <source src="mov_bbb.mp4" type="video/mp4">
+    <source src="mov_bbb.ogg" type="video/ogg">
+    Your browser does not support HTML video.
+  </video>
+
+
+
+
+<!-- E. VIDEO FORMATS 
+       File Format	           Media Type              Extension
+       MP4	                   video/mp4               .mp4
+       WebM	                   video/webm              .webm
+       Ogg	                   video/ogg               .ogg     -->
+
+
+
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

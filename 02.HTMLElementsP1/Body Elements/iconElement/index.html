@@ -1,0 +1,54 @@
+<!-- CHAPTER-11- ICON ELEMENT -->
+
+<!-- A. ICON- INTRODUCTION
+    1. There are two types of icon: 1) The Title Icons  2) The Page Icons -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+
+  <!-- B. FAVICON- A TITLE ICON
+    1. The Title Icon are displayed using Favicon Image: A favicon is a small image, 
+       so it should be a simple image with high contrast. 
+    2. We can use any image as favicon. A favicon image is displayed to the left of the 
+       page title in the browser tab in the title bar.
+    3. To add a favicon to our website, either save our favicon image to the root directory 
+       of youe webserver, or create a folder in the root directory called images, and save our 
+       favicon image in this folder. A common name for a favicon image is "favicon.ico".
+    4. Next, add a <link> element to our "index.html" file, after the <title> element as seen below.
+    5. Favicon File Format Support: ICO,	PNG,	GIF, JPEG,	SVG -->
+
+  <!-- Favicon Link -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Font Awesome Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <!-- C. FONT AWESOME ICON- A PAGE ICON
+    1. To use the Font Awesome icons, add the following line inside the <head> section of your HTML page, as pasted 
+       above.
+    2. To insert a page icon, add the name of the "ICON CLASS" to any inline HTML element.
+    3. The <i> and <span> elements are generally used to add icons. 
+    4. Even we can use style attribute to style the particular icon. -->
+
+  <i class="fa fa-car"></i> 
+  <i class="fa fa-car" style="font-size:48px;"></i>
+  <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+
+
+
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

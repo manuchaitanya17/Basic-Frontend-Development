@@ -1,0 +1,71 @@
+<!-- CHAPTER-13- AUDIO ELEMENT -->
+
+<!-- A. AUDIO ELEMENT- INTRODUCTION
+    1. The HTML Audio element is used to play an audio file on a web page.
+    2. To play an audio file in HTML, use the <audio> tag. Its a inline element.
+    3. The <source> element allows you to specify alternative audio files which the 
+       browser may choose from. The browser will use the first recognized format.
+    4. The text between the <audio> and </audio> tags will only be displayed in 
+       browsers that do not support the <audio> element.-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+  <!-- D. ATTRIBUTES IN VIDEO ELEMENT 
+    1. controls: The controls attribute adds audio controls, like play, pause, and
+       volume. It's a compulsory tag. 
+
+    2. autoplay: To start a video automatically, we use the autoplay attribute.
+
+    3. muted: Add muted after autoplay to let our video start playing automatically
+       (but muted). We can add muted indivisually also, these are control undefault 
+       boolean values.
+
+    4. loop: A Boolean attribute; if specified, the browser will automatically seek back 
+       to the start upon reaching the end of the video. 
+  
+    5. preload: This enumerated attribute is intended to provide a hint to the browser about what the
+       author thinks will lead to the best user experience regarding what content is loaded before the 
+       video is played. It may have one of the following values:
+         - none: Indicates that the video should not be preloaded.
+         - metadata: Indicates that only video metadata (e.g. length) is fetched.
+         - auto: Indicates that the whole video file can be downloaded, even if the user is not 
+           expected to use it.
+         - empty string: Synonym of the auto value.
+       The default value is different for each browser. The spec advises it to be set to metadata.-->
+
+
+  <audio src="chicken.mp3" controls>
+    Your browser does not support the Audio Element.
+  </audio>
+
+  <audio controls autoplay loop>
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+    Your browser does not support the Audio Element.
+  </audio>
+
+
+
+  <!-- E. AUDIO FORMATS 
+       File Format	           Media Type              Extension
+       MP3	                   audio/mpeg              .mp3
+       Wav	                   audio/wav               .wav
+       OGG	                   audio/ogg               .ogg     -->
+
+
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
