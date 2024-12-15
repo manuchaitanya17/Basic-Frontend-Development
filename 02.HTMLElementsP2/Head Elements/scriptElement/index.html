@@ -1,0 +1,54 @@
+<!-- CHAPTER- 4- SCRIPT ELEMENT -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <!-- A. SCRIPT ELEMENT- INTRODUCTION
+    1. The <script> element is used to include client-side JavaScripts, in the HTML Document.
+  
+    2.  The <script> element can be placed in the <head> or <body> section of the HTML document. Placing 
+        it in the <head> section might delay the rendering of the page since JavaScript execution blocks 
+        the parsing of the document. Placing it at the end of the <body> section is often preferred to 
+        ensure the HTML content is parsed and displayed before the JavaScript runs.
+  
+    3.  JavaScript in the <script> element is executed sequentially, from top to bottom. If the <script> element 
+        is in the <head>, using the defer attribute(boolean attribute) will ensure that the script is executed
+        after the HTML is parsed,improving page load performance. 
+  
+    4. The <script> element allows us to:  
+       a) Include JavaScript Code directly, i.e Internal JS in the HTML file: We can include JavaScript code 
+          directly within the <script> tags. This is useful for small, specific internal scripts. However, for 
+          larger scripts or better code organization, it's recommended to use external JavaScript files.
+  
+       b) Link to an External JavaScript File: We can also link to an external JavaScript file using the src 
+          attribute of the <script> element. This separates your JavaScript code from your HTML content, making 
+          the code easier to manage and allowing for reuse across multiple pages.
+  
+    
+  
+    5. Attributes of Script Element will discussed after JS Tutorial. --> 
+
+  
+   <script>
+        function showMessage() {
+            alert('Hello, World!');
+        }
+        showMessage();
+   </script>
+  
+  
+</head>
+
+<body>
+
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

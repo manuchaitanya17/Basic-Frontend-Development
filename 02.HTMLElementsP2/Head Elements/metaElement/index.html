@@ -1,0 +1,63 @@
+<!-- CHAPTER- 5- META ELEMENT -->
+
+  <!-- A. META ELEMENT- INTRODUCTION
+    1. The <meta> element is typically used to specify:
+       a) Character Set(We have discussed earlier). 
+       b) Page Description.
+       c) Keywords.
+       d) Author of the Document.
+       e) Refresh Document.
+       f) Viewport Settings.
+
+    2. The metadata will not be displayed on the page, but is used by browsers (how to display content or reload page), 
+       by search engines (keywords), and other web services. --> 
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- a) Define the Character Set used: -->
+  <meta charset="UTF-8">
+  
+  <!-- b) Define Keywords for Search Engines: -->
+  <meta name="keywords" content="HTML Tutorial">
+  
+  <!-- c) Define a Description of your Web Page: -->
+  <meta name="description" content="Free Web Tutorials">
+  
+  <!-- d) Define the Author of the page: -->
+  <meta name="author" content="Manu Chaitanya">
+  
+  <!-- e) Refresh Document every 30 seconds: 
+         - http equiv: The http-equiv attribute is used in the HTML <meta> element to simulate HTTP response headers
+           within an HTML document. When the browser encounters a <meta> tag with the http-equiv attribute, it
+           interprets the value of http-equiv as an HTTP header that would typically be sent by the server. The 
+           browser then behaves as if it received that header from the server during the HTTP response. -->
+  
+  <meta http-equiv="refresh" content="30">
+  
+  <!-- f) Setting the Viewport to make our website look good on all devices: The viewport is the user's visible area of a web page. 
+        It varies with the device - it will be smaller on a mobile phone than on a computer screen. We have to include the meta 
+        element named viewport in the document. This gives the browser instructions on how to control the page's dimensions and scaling.
+
+        - The width=device-width part sets the width of the page to follow the screen-width of the device (which will 
+          vary depending on the device).
+        - The initial-scale=1.0 part sets the Initial Zoom Level(default by each browser) when the page is first loaded by the 
+          browser. -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>My Title Here</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  Hello world
+  <script src="script.js"></script>
+
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
