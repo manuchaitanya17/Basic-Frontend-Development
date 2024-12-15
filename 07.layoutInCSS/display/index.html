@@ -1,0 +1,100 @@
+<!-- CHAPTER-1 DISPLAY PROPERTIES IN CSS -->
+
+<!-- A. DISPLAY-INTRODUCTION
+  1. The display property is used to specify how an element is shown on a web page.
+  2. Every HTML element has a DEFAULT DISPLAY VALUE, depending on what type of element
+     it is. The default display value for most elements is block or inline.
+  3. The display property is used to change the default display behavior of HTML elements.
+  4. Changing the display property of an element only changes how the element is displayed,
+     NOT what kind of element it is. So, an inline element with display: block; is not 
+     allowed to have other block elements inside it.
+  5. There are two types of elements on the basis of how they are diplayed:
+     a) Block Elements: 
+        - A Block-level element ALWAYS starts on a new line and takes up the full width 
+          available. 
+        - Padding, Margin, Width, Height, Border properties are applied on block elements. 
+  
+     b) Inline Elements: 
+        - An inline element DOES NOT start on a new line and only takes up as much width as
+          necessary. We can't set the width using width property.
+        - Padding and margin can be applied to inline elements using the padding and margin 
+          properties. However, the top and bottom padding/margin will not affect the spacing
+          between lines of text. 
+        - Borders can be applied to inline elements using the border property. The border will
+          wrap around the content of the inline element. -->
+
+
+
+
+<!-- B. DISPLAY PROPERTIES
+  1. The display property has many values: RPDF- displayValues
+    1) inline	- Displays an element as an inline element
+    2) block-	Displays an element as a block element
+    3) inline-block- Displays an element as an inline-level block container. The element 
+                      itself is formatted as an inline element, we can indeed set the width,
+                      height, padding, and margin properties on an inline-level element.
+    4) none- The element is completely removed
+    5) initial- Sets this property to its default value
+    6) inherit- Inherits this property from its parent element
+    7) list-item-Let the element behave like a <li> element, we can imagine the element
+       inside <li>. -->
+
+
+
+<!-- B. VISIBILITY:HIDDEN VS DISPLAY:NONE
+  1. Hiding an element can be done by setting the display property to none. The element
+     will be hidden, and the page will be displayed as if the element is not there. 
+  2. However, the element will still take up the same space as before. The element will
+     be hidden, but still affect the layout. -->
+
+ 
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    a {
+      display: inline-block;
+        padding: 5px;
+        margin: 10px;
+        border: 1px solid black;
+    }
+
+    h1.hidden {
+      display: none;
+    }
+
+    h1.hidden {
+      visibility: hidden;
+    }
+
+    .list-item {
+      display: list-item;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Manu Chaitanya</h1>
+  <h1>Malik Arsala</h1>
+
+  <ol>
+    <div class="list-item">List Item 1</div>
+    <div class="list-item">List Item 2</div>
+    <div class="list-item">List Item 3</div>
+  </ol>
+
+  
+  <a href="www.manuchaitanya.com">Manu Chaitnya's Website</a>
+  <a href="www.malikarsala.com">Malik Arsala's Website</a>
+  <script src="script.js"></script>
+</body>
+
+</html>

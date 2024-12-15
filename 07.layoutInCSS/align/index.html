@@ -1,0 +1,121 @@
+<!-- CHAPTER-5 ALIGN PROPERTY -->
+
+<!-- A. HORIZONTAL ALIGNMENT- CENTER ALIGN
+  1. Center Align Elements:
+     - To horizontally center a block element (like <div>),  use margin: auto;
+     - Center aligning has no effect if the width property is not set, or set to 100%.
+     - The element will then take up the specified width, and the remaining space
+       will be split equally between the two margins. 
+  2. Center Align Text:
+     - To just center the text inside an element, use text-align: center; 
+     - We can also use text-align: right; to right the text.
+  3. Center Align Image:
+     - To center an image, set left and right margin to auto making it into a block 
+       element. -->
+
+
+
+<!-- B. HORIZONTAL ALIGNMENT- LEFT ALIGN AND RIGHT ALIGN
+1. Left and Right Align Element - Using Position
+   - One method for aligning elements is to use position: absolute; -->
+
+
+<!-- C. VERTICAL ALIGNMENT- CENTER ALIGN
+  1. Vertical Align - Using Padding
+     - There are many ways to center an element vertically in CSS. A simple solution is
+       to use top and bottom padding.
+  2. Center Vertically - Using line-height
+     - line-height property with a value that is equal to the height property. -->
+
+
+  <!-- NOTE: HORIZONTAL AND VERTICAL ALIGNEMNT ARE ALSO DONE USING FLEXBOX, GRID, POSITION+TRANSFORM -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    /* Center Element */
+    .centerElement {
+      width: 80%;
+      margin: auto;
+      border: 3px solid blue;
+      padding: 10px;
+    }
+
+    /* Center Text */
+    .centerText {
+      text-align: center;
+      border: 3px solid green;
+    }
+
+    /* Center Image */
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+    }
+
+    /* Element Right Align */
+    .right {
+      position: absolute;
+      right: 0px;
+      width: 300px;
+      border: 3px solid #73AD21;
+      padding: 10px;
+    }
+
+    /* Vertical Center Align-Padding */
+    .centerPadding {
+      padding: 70px 0;
+      border: 3px solid green;
+    }
+
+    /* Vertical Center Align-Line-Height */
+    .centerLineHeight {
+      line-height: 200px;
+      height: 200px;
+      border: 3px solid green;
+
+    }
+
+    
+
+    
+  </style>
+</head>
+
+<body>
+
+  <div class="centerElement">
+    <p>This Element is centered.</p>
+  </div>
+
+  
+  <div class="centerText">
+    <p>This text is centered.</p>
+  </div>
+
+  <div class="right">
+    <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+  </div>
+
+  <div class="center">
+    <p>I am vertically centered.</p>
+  </div>
+
+  <div class="center">
+   I am vertically and horizontally centered. <br>
+   I am vertically and horizontally centered.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

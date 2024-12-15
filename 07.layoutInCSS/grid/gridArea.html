@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Step-1: Name the item that we want to grid. */
+.item1 {
+  grid-area: myArea;
+}
+
+.grid-container {
+  display: grid;
+
+  /* Step-2(I): Assign the number of columns item1 will be given, here item1 will be given an area equals five-columns:  */
+  grid-template-areas: 'myArea myArea myArea myArea myArea';
+  
+
+  /* Step-2(II): Assign the number of columns item1 will be given, here item1 will be given an area equals two-columns 
+     and rest 3 items, item2, item3, item4 will be placed in the same row right to item1:  */
+  grid-template-areas: 'myArea myArea . . . ';
+
+  /* Step-2(III): Assign the number of columns item1 will be given, here item1 will be given an area equals two-columns
+     and two rows and rest 3 items, item2, item3, item4 will be placed in the same row right to item1 and item5, item6,
+     item7 will be placed in the second row beside the item1:  */
+  grid-template-areas: 'myArea myArea . . . ' 'myArea myArea . . . ';
+
+    /* Refer: https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-area_named2 */
+
+  
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>The grid-area Property</h1>
+
+<p>You can use the <em>grid-area</em> property to name grid items.</p>
+
+<p>You can refer to the name when you set up the grid layout, by using the <em>grid-template-areas</em> property on the grid container.</p>
+
+<p>Item1, is called "myArea" and will take up the place of two columns (out of five):</p>
+
+<div class="grid-container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>  
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+
+</body>
+</html>

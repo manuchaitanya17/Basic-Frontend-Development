@@ -1,0 +1,153 @@
+<!-- CHAPTER-8 GRID -->
+
+<!-- A. GRID INTRODUCTION
+  1. The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making
+     it easier to design web pages without having to use floats and positioning. 
+  2. A grid layout consists of a parent element, with one or more child elements.
+ 
+  3. Grid Columns: The vertical lines of grid items are called columns.
+  4. Grid Rows: The horizontal lines of grid items are called rows.
+  5. Grid Gaps: The spaces between each column/row are called gaps. You can adjust the gap size by
+     using one of the following properties: column-gap, row-gap, gap. The gap property is a shorthand
+     property for the row-gap and the column-gap properties. 
+  6. Grid Lines: The lines between columns are called column lines. The lines between rows are called
+     row lines. Refer to line numbers when placing a grid item in a grid container. -->
+
+
+
+
+<!-- B. GRID CONTAINER 
+  1. To make an HTML element behave as a grid container, you have to set the display property to grid or
+     inline-grid.
+  2. Grid containers consist of grid items, placed inside columns and rows. 
+  3. All direct children of the grid container automatically become grid items.
+  4. The 'grid-template-columns' Property: The grid-template-columns property defines the number of columns
+     in your grid layout, and it can define the width of each column.
+  5. The 'grid-template-rows' Property: The grid-template-rows property defines the height of each row.
+  6. The 'justify-content' Property: The justify-content property is used to align the whole grid inside the
+     container. The grid's total width has to be less than the container's width for the justify-content 
+     property to have any effect. Values are space-evenly, space-arround, space-between, center, start, end.
+  7. The 'align-content' Property: The align-content property is used to vertically align the whole grid inside
+     the container. Values are space-evenly, space-arround, space-between, center, start, end. The grid's total 
+     height has to be less than the container's height for the align-content property to have any effect. -->
+
+
+
+<!-- C. GRID ITEM
+  1. The grid-column property defines on which column(s) to place an item. We define where the item will
+     start, and where the item will end.
+  2. The grid-column property is a shorthand property for the grid-column-start and the grid-column-end prop-
+     erties. Item given such property will START ON column grid-column-start value and END BEFORE grid-column-
+     end. 
+  3. The grid-row Property: The grid-row property defines on which row to place an item. We define where the
+     item will start, and where the item will end. The grid-row property is a shorthand property for the
+     grid-row-start and the grid-row-end properties.
+  4. The grid-area Property: The grid-area property can be used as a shorthand property for the grid-row-start,
+     grid-column-start, grid-row-end and the grid-column-end properties. 
+  6. The Order of the Items: The Grid Layout allows us to position the items anywhere we like. The first item 
+     in the HTML code does not have to appear as the first item in the grid.
+
+  5. Naming Grid Items: The grid-area property can also be used to assign names to grid items. Named grid items
+     can be referred to by the grid-template-areas property of the grid container. When we assign a name to a 
+     item using grid-area. Then the secondly in container we have asssign for what area the the particular has
+     to set. Refer Code. Each row is defined by apostrophes (' '). The columns in each row is defined inside the
+     apostrophes, separated by a space. -->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .container{
+      border: 2px solid violet;
+      display: grid;
+    }
+    
+    .grid-container1 {
+      display: grid;
+      row-gap: 50px;
+    }
+
+    .grid-container2 {
+      display: grid;
+      column-gap: 50px;
+    }
+
+    .grid-container3 {
+      display: grid;
+      gap: 50px;
+    }
+    
+    .grid-container4 {
+      display: grid;
+      gap: 50px 100px;  /* R -> C */
+    }
+
+    
+    .grid-container {
+      display: grid;
+      background-color: #2196F3;
+      /* Number of Columns/Rows and its Width/Height */
+      grid-template-columns: 200px 100px 50px 25px;
+      grid-template-rows: 80px 200px;
+
+      /* Setting Gaps */
+      gap: 10px;
+
+
+      /* Managing Extra Width using justify-content */
+      /* justify-content: space-evenly; */
+      padding: 10px;
+
+      /* Managing Extra Height using align-content */
+      height: 800px;
+      align-content: center;
+    }
+
+    
+    .item {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px 0;
+      font-size: 30px;
+    }
+
+    .item-1, .item-5 {
+      background-color: rgba(255, 5, 255, 0.8);
+      width: 100px; /* Don't get confused between Columns Width and Items Width */ 
+    }
+
+    
+
+
+    
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="item item-1">1</div>
+    <div class="item item-2">2</div>
+    <div class="item item-3">3</div>
+    <div class="item item-4">4</div>
+    <div class="item item-5">5</div>
+    <div class="item item-6">6</div>
+    <div class="item item-7">7</div>
+    <div class="item item-8">8</div>
+  
+  </div>
+
+
+
+
+  
+  <script src="script.js"></script>
+</body>
+
+</html>

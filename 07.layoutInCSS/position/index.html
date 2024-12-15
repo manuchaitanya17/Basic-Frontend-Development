@@ -1,0 +1,170 @@
+<!-- CHAPTER-2 POSITION PROPERTY -->
+
+<!-- A. POSITION PROPERTIES-INTRODUCTION
+  1. The position property specifies the type of positioning method used for an element.
+  2. There are five different position values:
+     a) static
+     b) relative
+     c) fixed
+     d) absolute
+     e) sticky
+  3. Elements are then positioned using the top, bottom, left, and right properties. However,
+     these properties will not work unless the position property is set first. They also work 
+     differently depending on the position value. -->
+
+
+
+<!-- B. STATIC POSITIONING
+  1. HTML elements are positioned static by default.
+  2. Static positioned elements are not affected by the top, bottom, left, and right properties. 
+  3. An element with position: static; is not positioned in any special way; it is always
+     positioned according to the normal flow of the page. -->
+
+
+
+<!-- C. RELATIVE POSITIONING
+  1. An element with position: relative; is positioned relative to its normal position.
+  2. Setting the top, right, bottom, and left properties of a relatively-positioned
+     element will cause it to be adjusted away from its normal position. 
+  3. Other content will not be adjusted to fit into any gap left by the element. -->
+
+
+
+<!-- D. FIXED POSITIONING
+  1. An element with position: fixed; is positioned relative to the viewport, which means
+     it always stays in the same place even if the page is scrolled. The top, right, bottom,
+     and left properties are used to position the element.
+  2. Position is loosed. Can be used by the next element.
+  3. If multiple elements are given position: fixed and they overlap in the viewport, they can 
+     indeed overlap each other. -->
+
+
+
+<!-- E. ABSOLUTE POSITIONING
+  1. An element with position: absolute; is positioned relative to the nearest positioned ancestor.
+  2. However; if an absolute positioned element has no positioned ancestors, it uses the document
+     body, and moves along with page scrolling. 
+  3. Position is loosed. Can be used by the next element.
+  4. Absolute positioned elements are removed from the normal flow, and can overlap elements. -->
+
+
+
+<!-- F. STICKY POSITIONING
+  1. An element with position: sticky; is positioned based on the user's scroll position.
+  2. A sticky element toggles between relative and fixed, depending on the scroll position.
+     It is positioned relative until a given offset position is met in the viewport - then
+     it "sticks" in place (like position:fixed). -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    
+    /* Static Positioning */
+    
+    div.static {
+      position: static;
+      border: 3px solid #73AD21;
+    }
+
+    
+    /* Realtive Positioning */
+    
+    div.relative {
+      position: relative;
+      left: 30px;
+      border: 3px solid #73AD21;
+    }
+
+
+    /* Fixed Positioning */
+
+    div.fixed1 {
+
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      border: 3px solid #73AD21;
+    }
+
+    div.fixed2 {
+
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      border: 3px solid #73AD21;
+    }
+
+  
+    /* Absolute Positioning */
+    
+    div.relative {
+      position: relative;
+      width: 400px;
+      height: 200px;
+      border: 3px solid #73AD21;
+    } 
+
+    div.absolute {
+      position: absolute;
+      top: 80px;
+      right: 0;
+      width: 200px;
+      height: 100px;
+      border: 3px solid red;
+    }
+
+    
+    /*  Sticky Positioning */
+    div.sticky {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 10px;
+      padding: 5px;
+      background-color: #cae8ca;
+      border: 2px solid #4CAF50;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+
+  <h2>position: fixed;</h2>
+
+  <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+
+  <div class="fixed1">
+  This div element has position: fixed1;
+  </div>
+
+  <div class="fixed2">
+  This div element has position: fixed2;
+  </div>
+
+
+
+
+  
+  <p>Try to <b>scroll</b> inside this frame to understand how sticky positioning works.</p>
+
+  <div class="sticky">I am sticky!</div>
+
+  <div style="padding-bottom:2000px">
+    <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+    <p>Scroll back up to remove the stickyness.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
