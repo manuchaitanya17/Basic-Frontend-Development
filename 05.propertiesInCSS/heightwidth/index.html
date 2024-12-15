@@ -1,0 +1,91 @@
+<!-- CHAPTER-5 HEIGHT AND WIDTH PROPERTY IN CSS -->
+
+<!-- A. HEIGHT AND WIDTH
+  1. The CSS height and width properties are used to set the height and width of an ELEMENT'S CONTENT AREA.
+  2. The CSS max-width property is used to set the maximum width of an element.
+  3. The height and width properties do not include padding, borders, or margins. It sets the
+     height/width of the area inside the padding, border, and margin of the element. It will 
+      put the element content in the top-left corner if the element height- width >> elements's
+      content size. Refer-h&wDisplay.png. This is without padding and margin.
+  4.The height and width properties may have the following values:
+    - auto - This is default. The browser calculates the height and width according to the element.
+    - length - Defines the height/width in px, cm, etc.
+    - % - Defines the height/width in percent of the parent block
+    - initial - Sets the height/width to its default value
+    - inherit - The height/width will be inherited from its parent value (100%) -->
+
+
+
+<!-- B. SETTING MAX-WIDTH
+  1. The max-width property is used to set the maximum width of an element. 
+  2. The max-width can be specified in length values, like px, cm, etc., or in percent (%) of
+     the containing block, or set to none (this is default. Means that there is no maximum width). 
+  3. The problem with the <div> above occurs when the browser window is smaller than the width 
+     of the element (500px). The browser then adds a horizontal scrollbar to the page. 
+  4. Using max-width instead, in this situation, will improve the browser's handling of small windows. -->
+
+<!-- Note: What is Element Content Area: -->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    div {
+      max-width: 500px;
+      height: 100px;
+      background-color: powderblue;
+    }
+
+
+/* C. BOX MODEL
+  1. All HTML elements can be considered as boxes. 
+  2. The CSS box model is essentially a box that wraps around every HTML element. It consists of:
+     content, padding, borders and margins. The image below illustrates the box model: Refer boxModel.png 
+  3. Explanation of the different parts:
+      - Content - The content of the box, where text and images appear. Height and Width set to 
+        a Element defines it as Element Content. When there is no padding and border Element == Content.
+      - Padding - Clears an area around the content. The padding is transparent.
+      - Border - A border that goes around the padding and content.
+      - Margin - Clears an area outside the border. The margin is transparent.
+      
+  4. Here is the calculation for the Box Model:
+      320px (width of elements content area)
+      + 20px (left padding + right padding)
+      + 10px (left border + right border)
+      + 10px (left margin + right margin)
+      = 360px (total width of box model)
+    
+      50px (height of content area)
+      + 20px (top padding + bottom padding)
+      + 10px (top border + bottom border)
+      + 10px (top margin + bottom margin)
+      = 90px (total height of box model)  */
+
+
+    
+    div {
+      width: 320px;
+      height: 50px;
+      padding: 10px;
+      border: 5px solid gray;
+      margin: 5px;
+    
+    }
+    
+  </style>
+</head>
+
+<body>
+  <script src="script.js"></script>
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

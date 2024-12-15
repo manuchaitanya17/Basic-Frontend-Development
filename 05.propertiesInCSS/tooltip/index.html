@@ -1,0 +1,58 @@
+<!-- CHAPTER-11 TOOLTIP -->
+
+<!-- A. TEXT PROPERTIES-INTRODUCTION
+  1. CSS has a lot of properties for formatting text. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  
+  <style>
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    text-align: center;
+  }
+
+  .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  </style>
+</head>
+
+  
+<body
+  <!-- Tooltip using title attribute -->
+  <p title="This is a tooltip"">Hey, here is a tooltip! </p>
+
+
+  <!-- Self Created Tooltip -->
+  <div class="tooltip">Hover over me
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

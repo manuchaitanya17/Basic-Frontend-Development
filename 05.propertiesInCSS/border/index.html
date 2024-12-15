@@ -1,0 +1,160 @@
+<!-- CHAPTER-2 BORDER PROPERTY IN CSS -->
+
+<!-- A. BORDER-INTRODUCTION
+  1. Use to specify the style, width, and color of an element's border.
+  2. Borders are also used for layout creation as temporary border. -->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  
+<!-- B. BORDER STYLE
+  1. Formula- border-style:value;
+  2. The Value are:
+      - dotted - Defines a dotted border
+      - dashed - Defines a dashed border
+      - solid - Defines a solid border
+      - double - Defines a double border
+      - groove - Defines a 3D grooved border. Outer-Dark, Inner-Light Color
+      - ridge - Defines a 3D ridged border. Outer-Light, Inner-Dark Color
+      - inset - Defines a 3D inset border. The effect depends on the border-color value
+      - outset - Defines a 3D outset border. The effect depends on the border-color value
+      - none - Defines no border
+      - hidden - Defines a hidden border
+  3. None of the other border properties will work without setting the border style.
+  4. The border-style property can have from one to four values (for the top border, right border,
+     bottom border, and the left border). Refer-border-style.gif -->
+
+
+
+<!-- C. BORDER WIDTH
+  1. The border-width property specifies the width of the four borders. 
+  2. The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three
+     pre-defined values: thin, medium, or thick. 
+  3. The border-width property can have from one to four values (for the top border, right border, 
+     bottom border, and the left border). -->
+
+
+  
+<!-- D. BORDER COLORS
+  1. The border-color property is used to set the color of the four borders.
+  2. If border-color is not set, it inherits the color of the element.
+  3. The border-color property can have from one to four values (for the top border, right border,
+     bottom border, and the left border). -->
+
+
+  
+<!-- E. BORDER SIDES
+  1. Property: In CSS, there are also properties for specifying each of the borders (top, right, 
+     bottom, and left).
+  2. Values: Also we have values that specifies indivisual borders (top-width, right-width, bottom-
+     width, and left-width). 
+     - If the border-style property has four values:
+      border-style: top right bottom left;
+     - If the border-style property has three values:
+      border-style: top sides bottom;
+     - If the border-style property has two values:
+      border-style: top&bottom sides;
+     - If the border-style property has one value:
+      border-style: all;
+  7. The border-style property is used in the below example. However, it also works with border-width
+     and border-color. -->
+ 
+
+  
+<!-- F. BORDER SHORTHAND PROPERTY
+  1. The border property is a shorthand property for the following individual border properties:
+     border-width, border-style (required), border-color 
+  2. We can also specify all the individual border properties for just one side. -->
+
+
+  
+<!-- G. BORDER ROUNDED PROPERTY
+  1. The border-radius property is used to add rounded borders to an element. -->
+
+
+  
+<!-- H. BORDER IMAGES
+  1. With the CSS border-image property, we can set an image to be used as the border around an element. 
+  2. The property has three parts:
+   - The image to use as the border
+   - Where to slice the image
+   - Define whether the middle sections should be repeated or stretched
+  3. To read more- https://www.w3schools.com/css/css3_border_images.asp -->
+
+  
+  <style>
+    p{
+      color: red;
+      border-style: solid;
+    }
+
+    p.one {
+      border-style: solid;
+      border-width: 5px;
+    }
+
+    p.two {
+      border-style: solid;
+      border-width: medium;
+    }
+
+    p.three {
+      border-style: solid;
+      border-width: 5px 20px; /* 5px top and bottom, 20px on the sides */
+    }
+
+    p.five {
+      border-style: solid;
+      border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and 35px left */
+    }
+
+    p.six {
+      border-style: solid;
+      border-color: red;
+    }
+
+    p.seven {
+      border-top-style: dotted;
+      border-right-style: solid;
+      border-bottom-style: dotted;
+      border-left-style: solid;
+    }
+
+    p.eight {
+      border: 5px solid red;
+    }
+
+    p.nine {
+      border-left: 5px solid red;
+    }
+
+    p.ten {
+      border: 2px solid red;
+      border-radius: 5px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <p>This is Manu</p>
+  
+
+  <script src="script.js"></script>
+
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

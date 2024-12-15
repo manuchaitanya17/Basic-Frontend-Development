@@ -1,0 +1,105 @@
+<!-- CHAPTER-10 LIST PROPERTY IN CSS -->
+
+<!-- A. LIST PROPERTIES-INTRODUCTION
+  1. In HTML, there are two main types of lists:
+      a) unordered lists (<ul>) - the list items are marked with bullets
+      b) ordered lists (<ol>) - the list items are marked with numbers or letters
+  2. The CSS list properties allow you to:
+      a) Set different list item markers for ordered lists
+      b) Set different list item markers for unordered lists
+      c) Set an image as the list item marker
+      d) Add background colors to lists and list items -->
+
+
+
+
+<!-- B. LIST PROPERTIES-STYLE
+  1. The list-style-type property specifies the type of list item marker. -->
+
+
+
+
+<!-- C. LIST PROPERTIES-IMAGE
+1. The list-style-image property specifies an image as the list item marker. -->
+
+
+
+
+<!-- D. LIST PROPERTIES-POSITION 
+  1. The list-style-position property specifies the position of the list-item markers 
+     (bullet points). "list-style-position: outside;" means that the bullet points
+     will be outside the list item(default). The start of each line of a list item will be
+     aligned vertically. -->
+
+
+
+
+<!-- E. LIST PROPERTIES-SHORTHAND
+  1. The list-style property is a shorthand property. It is used to set all the list 
+     properties in one declaration using: list-style: type position image -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    
+    /* List Style Type */
+    
+    ul.a {
+    list-style-type: circle;
+    }
+
+    ul.b {
+      list-style-type: square;
+    }
+  
+    ol.c {
+      list-style-type: upper-roman;
+    }
+  
+    ol.d {
+      list-style-type: lower-alpha;
+    }
+
+    
+    /* List Style Image */
+    ul {
+      list-style-image: url('sqpurple.gif');
+    }
+
+    
+    /* List Style Position */
+    
+    ul.a {
+      list-style-position: outside;
+    }
+
+    ul.b {
+      list-style-position: inside;
+    }
+
+    
+    /* List Style Shorthand */
+    
+    ul {
+      list-style: square inside url("sqpurple.gif");
+    }
+    
+  
+  </style>
+</head>
+
+<body>
+  Hello world
+  <script src="script.js"></script>
+</body>
+
+</html>

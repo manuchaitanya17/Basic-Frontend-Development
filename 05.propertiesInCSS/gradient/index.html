@@ -1,0 +1,181 @@
+<!-- CHAPTER-9 GRADIENT PROPERTY -->
+
+<!-- A. GRADIENT PROPERTIES-INTRODUCTION
+  1. CSS gradients let you display smooth transitions between two or more specified colors.
+  2. CSS defines three types of gradients:
+     - Linear Gradients (goes down/up/left/right/diagonally)
+     - Radial Gradients (defined by their center)
+     - Conic Gradients (rotated around a center point) -->
+
+
+
+
+<!-- B. LINEAR GRADIENT
+  1. Direction - Top to Bottom (this is default): 
+     background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+  2. Direction - Left to Right:
+     background-image: linear-gradient(to right, color-stop1, color-stop2, ...);
+  3. Direction - Right to Left:
+     background-image: linear-gradient(to left, color-stop1, color-stop2, ...);
+  4. Direction - Bottom to Top:
+     background-image: linear-gradient(to top, color-stop1, color-stop2, ...);
+  5. Direction - Diagonal:
+     background-image: linear-gradient(to bottom right, color-stop1, color-stop2, ...);
+  6. Direction - Using Angles: If we want more control over the direction of the gradient, we
+     can define an angle, instead of the predefined directions (to bottom, to top, to right, 
+     to left, to bottom right, etc.). A value of 0deg is equivalent to "to top". A value of 
+     90deg is equivalent to "to right". A value of 180deg is equivalent to "to bottom". 
+  7. Transparency using Gradient: To add transparency, we use the rgba() function to define the
+     color stops. The last parameter in the rgba() function can be a value from 0 to 1, and it 
+     defines the transparency of the color: 0 indicates full transparency, 1 indicates full color 
+     (no transparency).
+     background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); -->
+
+
+
+
+<!-- C. RADIAL GRADIENT
+  1. A radial gradient is defined by its center. To create a radial gradient you must also define
+     at least two color stops.
+  2. Syntax: background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+  3. By default, shape is ellipse, size is farthest-corner, and position is center, with evenly spaced.
+     background-image: radial-gradient(red, yellow, green);
+  4. Differently Spaced Color Stops:  background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+  5. Set Shape: The shape parameter defines the shape. It can take the value circle or ellipse.
+     The default value is ellipse. background-image: radial-gradient(circle, red, yellow, green);
+  6. Set Size: The size parameter defines the size of the gradient. It can take four values: closest-side
+     farthest-side, closest-corner, farthest-corner. The default value is farthest-corner.
+  7. Repeating a radial-gradient: The repeating-radial-gradient() function is used to repeat radial gradients.
+     background-image: repeating-radial-gradient(red, yellow 10%, green 20%); -->
+
+
+
+
+<!-- D. CONIC GRADIENT
+  1. A conic gradient is a gradient with color transitions rotated around a center point. To create a conic 
+     gradient you must define at least two colors. Used for creating Pie Charts, setting border-radius:50%;
+     background-image: conic-gradient([from angle] [at position,] color [degree], color [degree], ...);
+  2. By default, angle is 0deg and position is center. If no degree is specified, the colors will be spread 
+     equally around the center point.
+  3. Set Degree to Colors: background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg); That much
+     color spread in degrees.
+  4. Set Angle: background-image: conic-gradient(from 45deg, red, yellow, green); The [from angle] specifies
+     an angle that the entire conic gradient is rotated by. The color will start from that angle.
+  5. Set Position: background-image: conic-gradient(from 45deg at 10% 10%, red,yellow 90deg, green 210deg);
+  6. Repeating a Conic Gradient: The repeating-conic-gradient() function is used to repeat conic gradients. -->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+
+    /* LINEAR GRADIENT */
+
+    /* 1. Normal Linear Gradient */
+    #grad1 {
+      height: 200px;
+      background-color: red; /* For browsers that do not support gradients */
+      background-image: linear-gradient(to right, red, yellow,green,blue);
+    }
+
+
+    /* 2. Transperency */
+    #grad2 {
+      height: 200px;
+      background-color: red; /* For browsers that do not support gradients */
+      background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    }
+
+
+    /* RADIAL GRADIENT */
+
+    /* 1. Default Radial Gradient  */
+    #grad3 {
+      height:400px;
+      background-image: radial-gradient(red, yellow, green);
+    }
+
+    /* 2. Set Color Stops */
+    #grad4 {
+       height:400px;
+      background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+    }
+
+    /* 3. Set Shape */
+    #grad5 {
+       height:400px;
+      background-image: radial-gradient(circle, red, yellow , green);
+    }
+
+    /* 3. Set Size */
+    #grad6 {
+      height:400px;
+      background-image: radial-gradient(farthest-side at 60% 55%, red, yellow, black);
+    }
+
+    /* 4. Repeated Radial Gradient */
+    #grad7 {
+      height: 150px;
+      width: 200px;
+      background-color: red; /* For browsers that do not support gradients */
+      background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+    }
+
+    
+    /* CONIC GARDIENT */
+
+    /* 1. Default Conic Gradient: Only Colors */
+    #grad8 {
+      height: 150px;
+      background-image: conic-gradient(red, yellow, green);
+    }
+
+    /* 2. Set Angle to Colors */
+    #grad9 {
+      height: 200px;
+      width: 200px;
+      background-color: red; /* For browsers that do not support gradients */
+      background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+    }
+
+
+    /* Set Angle of Reference */
+    #grad10 {
+      height: 200px;
+      width: 200px;
+      background-color: red; /* For browsers that do not support gradients */
+      background-image: conic-gradient(from 90deg, red, yellow, green);
+      border-radius: 50%;
+    }
+
+
+    /* Set Position */
+    #grad11 {
+      background-image: repeating-conic-gradient(red 10%, yellow 20%);
+      border-radius: 50%;
+    }
+
+    
+
+    
+  </style>
+</head>
+
+<body>
+   <div id="grad1"></div>
+   <div id="grad2"></div>
+   <div id="grad3"></div>
+  <div id="grad4"></div>
+   <div id="grad5"></div>
+   <div id="grad6"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!-- CHAPTER-3 MARGIN PROPERTY IN CSS -->
+
+<!-- A. MARGIN-INTRODUCTION
+  1. Margins are used to create space around element, OUTSIDE of any defined borders. 
+  2. Values to margin property is always regarding length. Can be specified as: 
+      - auto - the browser calculates the margin, always try to align(horizontally) the element in the 
+               center of the container by adding equaivalent margins to the left and right sides of the
+               element only.
+      - length - specifies a margin in px, pt, cm, etc.
+      - % - specifies a margin in % of the width and height of the containing element
+      - inherit - specifies that the margin should be inherited from the parent element
+  3. Negative values are allowed. -->
+
+
+
+<!-- B. MARGIN INDIVISUAL SIDES: 
+  1. Property: CSS has properties for specifying the margin for each side of an element:
+     margin-top, margin-right, margin-bottom, margin-left 
+  2. Value: Same like borders values also specify the margin for each side of the element.
+     Refer Chapter-2 -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    div {
+      margin: auto;
+      border: 1px solid blue;
+      width: 50%;
+    }
+
+    h1 {
+      margin: 0 0 50px 0;
+      border: 1px solid red;
+      padding: 10px;
+    }
+
+    h2 {
+      margin: 20px 0 20px 0;
+      border: 1px solid red;
+      padding: 10px;
+    }
+
+    h3 {
+      margin: 50px 0 0 0;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- C. MARGIN COLLAPSE
+  1. In this example the h1 element has a bottom margin of 50px and the h2 element has a top margin
+     of 20px. So, the vertical margin between h1 and h2 should have been 70px (50px + 20px). However,
+     due to margin collapse, the actual margin ends up being 50px. 
+  2. Top and bottom margins of elements are sometimes collapsed into a single margin that is equal
+     to the largest of the two margins.
+  3. This does not happen on left and right margins, only top and bottom margins. -->
+
+
+  
+  <div>THIS IS AUTO</div>
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3></h3>
+
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
