@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    #myDiv1,
+    #myDiv2 {
+      background-color: coral;
+      padding: 50px;
+    }
+
+    #myP1,
+    #myP2 {
+      background-color: white;
+      font-size: 20px;
+      border: 1px solid;
+      padding: 20px;
+    }
+
+    #myDIV {
+      background-color: coral;
+      border: 1px solid;
+      padding: 50px;
+      color: white;
+      font-size: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- B. HOW EVENTS WORKS INTERNALLY -->
+
+  <div id="container">
+    <button id="myButton">Click me</button>
+  </div>
+
+
+  <p id="output">We have to press key here!!</p>
+
+
+  <h1>Contact Form</h1>
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+
+  <!-- Event Attributes -->
+  <!-- Method-1 -->
+  <h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
+
+  <h1 onclick="changeText(this)" id="eventAttribute">Click on this text!</h1>
+
+
+  <!-- Multiple Event Listeners to Same Element -->
+  <button id="myBtn">Try it</button>
+
+
+
+  <!-- Event on Window Object -->
+  <p id="demo"></p>
+
+
+
+
+  <!-- Bubbling and Capturing Phases -->
+  <div id="myDiv1">
+    <h2>Bubbling:</h2>
+    <p id="myP1">Click me!</p>
+  </div><br>
+
+  <div id="myDiv2">
+    <h2>Capturing:</h2>
+    <p id="myP2">Click me!</p>
+  </div>
+
+
+  <!-- Remove addEventListener() Method -->
+  <div id="myDIV">
+    <p>This div element has an onmousemove event handler that disme ouse inside this orange field.</p>
+    <p>Click the button to remove the div's event handler.</p>
+    <button onclick="removeHandler()" id="myBtn">Remove</button>
+  </div>
+
+  <p id="demox"></p>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
