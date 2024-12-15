@@ -1,0 +1,58 @@
+<!-- CHAPTER-8 COUNTERS-->
+
+<!-- A. WHAT IS A COUNTER
+  1. CSS counters are like "variables". The variable values can be incremented automatically by
+     CSS rules. This is used by elements which will track how many times they are used/parsed.
+  2. To work with CSS counters we will use the following properties:
+     - counter-reset - Creates or resets a counter
+     - counter-increment - Increments a counter value
+     - content - Inserts generated content
+     - counter() or counters() function - Adds the value of a counter to an element
+  3. To use a CSS counter, it must first be created with counter-reset.
+  4. We can also use nesting counters on elements. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <!-- Steps: The following example creates a counter for the page (in the body selector), 
+       then increments the counter value for each <h2> element and adds
+       "Section <value of the counter>:" to the beginning of each <h2> element: -->
+
+  <style>
+    /* Step-1: Create a Counter of the particular element in it's parent element: */
+    body {
+      counter-reset: section;
+      /* Here section is the name of the counter */
+    }
+
+    /* Step-2: Then for h2(the element on which counter was to be set), we will increase
+       the counter value, when the particular element is parsed it will check the value of 
+       counter and increment it. */
+    h2::before {
+      counter-increment: section;
+
+      /* Step-3: The counter() returns the value of counter to content and the content value is 
+         returned to the element. */
+      content: "Section " counter(section) ": ";
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+  <h2>This is H2 is </h2>
+  <h2>This is H2 is </h2>
+  <h2>This is H2 is </h2>
+  <h2>This is H2 is </h2>
+  <script src="script.js"></script>
+</body>
+
+</html>

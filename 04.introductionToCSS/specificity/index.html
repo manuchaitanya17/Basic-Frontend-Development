@@ -1,0 +1,83 @@
+<!-- CHAPTER-9 CSS SPECIFICITY -->
+
+<!-- A. SPECIFICITY
+  1. If there are two or more CSS selector that point to the same element, the
+     selector with the highest specificity value will "win", and its style declaration
+     will be applied to that HTML element.
+  1. Every CSS Selector has its place in the Specificity Hierarchy.
+  2. There are four levels of specificity called Specificity Levels.
+    a) Inline styles - Example: <h1 style="color: pink;">
+    b) IDs - Example: #navbar
+    c) Classes, Pseudo-Classes, Attribute Selectors - Example: .test, :hover, [href]
+    d) Elements Name and Pseudo Elements - Example: h1, ::before
+  3. Equal specificity: the latest rule wins - If the same rule is written twice into 
+     the external style sheet, then the latest rule wins.-->
+
+
+
+<!-- B. HOW TO CALCULATE SPECIFICITY
+  1. Memorize how to calculate specificity!
+  2. Start at 0, add 100 for each ID value, add 10 for each class value (or pseudo
+    -class or attribute selector), add 1 for each element selector or 
+     pseudo-element. 
+  3. Inline style gets a specificity value of 1000, and is always given the highest
+     priority. Refer calculateSpecificity.png 
+  4. A class selector beats any number of element selectors. 
+  5. The universal selector (*) and inherited values have a specificity of 0. -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  
+  <style>
+    
+    #demo{
+      color: blue;
+    }
+    
+    .test {
+      color: green;
+    }
+    
+    p {
+      color: red;
+    }
+
+    /* Attribute Selector gets lower priority than ID Selector */
+    div #a {
+      background-color: green;
+    }  /* This has been given the priority as Specificity=101 */
+    
+    #a {
+      background-color: yellow;
+    }  /* Specificity=100 */
+    
+    div [id=a] {
+      background-color: blue;
+    }  /* Specificity=10 */
+
+    
+  </style>
+  
+</head>
+
+<body>
+
+  
+  <p id="demo" class="test" style="color: pink;">Hello World!</p>
+
+  <div>
+    <a id="a" href="www.manuchaitanya.com"">Manu Chaitanya</a>
+  </div>
+
+  
+  <script src="script.js"></script>
+</body>
+
+</html>

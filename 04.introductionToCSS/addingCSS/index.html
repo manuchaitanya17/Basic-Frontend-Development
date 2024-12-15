@@ -1,0 +1,77 @@
+<!-- CHAPTER-3 ADDING CSS -->
+
+<!-- A. ADD CSS IN HTML DOCUMENT
+  1. Three Ways to Insert CSS in HTML Document:
+    1. External CSS
+    2. Internal CSS
+    3. Inline CSS -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+
+  
+<!-- B. EXTERNAL CSS
+  1. With an external style sheet, we can change the look of an entire website by changing just one file. Each HTML page 
+     must include a reference to the external style sheet file inside the <link> element, inside the head section.
+  2. An external style sheet can be written in any text editor, and must be saved with a .css extension.
+  3.The external .css file should not contain any HTML tags or no need of style element to write style script. -->
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+
+<!-- C. INTERNAL CSS
+  1. An internal style sheet may be used if one single HTML page has to be unique under group of similar designed pages.
+  2. The internal style is defined inside the <style> element, inside the head section. -->
+
+  <style>
+  body {
+    background-color: linen;
+  }
+
+  h1 {
+    color: maroon;
+    margin-left: 40px;
+  }
+  </style>
+
+  
+</head>
+
+<body>
+
+
+<!-- D. INLINE CSS 
+  1. An inline style may be used to apply a unique style for a single element in a group of similarly designed elements.
+  2. To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS 
+     property. 
+  3. HTML Key -> style, HTML Value -> "CSS(property:value;)" -->
+
+  <h1 style="color:blue;text-align:center;">This is a heading</h1>
+  <p style="color:red;">This is a paragraph.</p>
+
+
+  
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
+
+
+
+<!-- E. MULTIPLE CSS FOR A SINGLE ELEMENT: CASCADING ORDER
+  1. If some properties have been defined for the same selector (element) in same style sheets, the value
+     from the last read style sheet will be used. 
+  2. But what about if we use different style sheet on same element with different values, which will be given the 
+     priority.
+  3. All the styles in a page will "cascade" into a new "virtual style sheet" before creation of CSSOM style sheet by 
+     the following rules, where number one has the highest priority:
+     a) Inline style (inside an HTML element)
+     b) External and Internal style sheets (in the head section)
+     c) Browser Default -->

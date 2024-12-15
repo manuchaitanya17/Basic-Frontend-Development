@@ -1,0 +1,72 @@
+<!-- CHAPTER-5 UNITS IN CSS -->
+
+<!-- A. CSS UNITS
+  1. CSS has several properties that requires units like margin, padding, color etc. 
+  2. There are only two types of units used by these properties: a)Length  b)Intensity c)Hue d)Saturation e)Lightness
+     f)Opacity. -->
+
+
+
+
+
+<!-- B. LENGTH AS UNIT
+  1. Many CSS properties take "length" values, such as width, margin, padding, font-size, etc.
+  2. Length is a number followed by a length unit, such as 10px, 2em, etc.
+  3. A whitespace cannot appear between the number and the unit. 
+  4. However, if the value is 0, the unit can be omitted.
+  5. For some CSS properties, negative lengths are allowed.
+  6. There are two types of length units: a)Absolute  b)Relative 
+  7. Absolute Lengths: 
+     - The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.
+     - Absolute length units are not recommended for use on screen, because screen sizes vary so much. However, they can 
+       be used if the output medium is known, such as for print layout.
+     - Refer absoluteLength.png for some of the absolute lengths.
+     - Pixels (px) are relative to the viewing device. For low-dpi devices, 1px is one device pixel (dot) of the 
+       display. For printers and high resolution screens 1px implies multiple device pixels.
+
+  8. Relative Lengths: 
+     - Relative length units specify a length relative to another length property. Relative length units scale better 
+       between different rendering mediums.
+     - Refer realtiveLength.png for some of the relative lengths. 
+     - The em and rem units are practical in creating perfectly scalable layout.
+     - Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm. -->
+
+
+
+
+<!-- C. COLOR AS UNIT
+  1. In CSS, there are several ways to specify colors, including named colors, hexadecimal (hex) colors, RGB values, 
+  2. RGBA values, HSL (Hue, Saturation, Lightness) values, HSLA values, and the currentColor keyword. These different 
+     color units allow for flexible and precise color specification in web design. 
+  3. RGB colors: RGB values specify a color by indicating the intensity of red, green, and blue as numerical values. For 
+     example, rgb(255, 0, 0) represents red. 
+  4. Hexadecimal (hex) colors: Hex values represent colors using a combination of six characters, where each pair 
+     represents the intensity of the red, green, and blue components. For example, #RRGGBB, where RR (red), GG (green), 
+     and BB (blue) are two-digit hexadecimal values ranging from 00 to FF.
+  5. RGBA colors: Similar to RGB, RGBA values also include an alpha channel to specify the opacity of the color. For 
+     example, rgba(255, 0, 0, 0.5) represents a semi-transparent red.
+  6. HSL colors: HSL is a color model that represents colors based on their hue, saturation, and lightness. The hue is 
+     represented as an angle (0 to 360), saturation and lightness are represented as percentages. For example, hsl(0, 
+     100%, 50%) represents pure red.
+  7. HSLA colors: Similar to HSL, HSLA values also include an alpha channel to specify the opacity of the color. For 
+     example, hsla(0, 100%, 50%, 0.5) represents a semi-transparent pure red.-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  Hello world
+  <script src="script.js"></script>
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
